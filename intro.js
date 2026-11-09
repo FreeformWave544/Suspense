@@ -1,5 +1,4 @@
 const smallScreen = window.matchMedia("(max-width: 768px)").matches
-console.log("${window.location.pathname.includes('/pages/') ? '../': './'}components/navbar.html")
 fetch(`${window.location.pathname.includes('/pages/') ? '../' : './'}components/navbar.html`)
     .then(response => response.text()).then(html => {
         document.querySelector('#navbar').innerHTML = html;
