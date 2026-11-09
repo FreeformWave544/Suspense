@@ -1,7 +1,7 @@
 const smallScreen = window.matchMedia("(max-width: 768px)").matches
 fetch(`${window.location.pathname.includes('/pages/') ? '../' : './'}components/navbar.html`)
     .then(response => response.text()).then(html => {
-        document.querySelector('#navbar').innerHTML = html;
+        if (document.getElementById('menuToggle') === null) { document.querySelector('#navbar').innerHTML = html; }
         const menuToggle = document.getElementById("menuToggle");
         const navLinks = document.getElementById("navLinks");
         menuToggle.addEventListener("click", () => {
