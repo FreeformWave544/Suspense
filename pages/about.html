@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SusPENse - About</title>
+    <link rel="stylesheet" href="../intro.css">
+</head>
+<body style="text-align: center;">
+    <div id="navbar"></div><br />
+    <article>
+        SusPENse is not a regular desk organiser, but rather an extension to your desk, hidden entirely beneath your desk.<br />
+        And while it is designed to be used in a classroom, it can also be used in day-to-day, to store laptops, drawing tablets, or even your coat!
+    </article>
+    <div class="box" style="width: 85vw;">
+        <h1>What makes it special?</h1>
+        <div style="display: flex; flex-direction: row; gap: 50px; padding-left: 30px; padding-right: 30px; padding-bottom: 50px; justify-content: center; align-items: center;">
+            <div style="margin-left: auto;">Other than the sick website?<br />Other than the amazing logo?<br />Other than the unique design?<br /><br />
+                It would probably be the practical day-to-day use, whether at home gaming and want to store your headset or at work and need to place your documents somewhere.</div>
+            <div class="img-container" style="margin-left: auto;"><img src="../imgs/plane.webp" alt="Example of what you could build." height="500px"></div>
+        </div>
+    </div>
+    <script type="module" src="../intro.js"></script>
+    <div class="cloud-noise-bg"> <svg style="display: none;"> <filter id="cloudNoise"> <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="4" stitchTiles="stitch"/> </filter> </svg> </div>
+</body>
+</html>
+<script>
+const img = document.querySelector(".box img");
+
+img.addEventListener("mousemove", (e) => {
+    const rect = img.getBoundingClientRect();
+    img.style.transformOrigin = `${((e.clientX - rect.left) / rect.width) * 100}% ${((e.clientY - rect.top) / rect.height) * 100}%`;
+    img.style.transform = "scale(1.2)";
+});
+
+img.addEventListener("mouseleave", () => {
+    img.style.transform = "scale(1.0)";
+    img.style.transformOrigin = "center center";
+});
+</script>
