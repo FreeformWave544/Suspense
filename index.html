@@ -17,26 +17,26 @@
     <div id="navbar"></div><br /><br /><br /><br /><br />
     <div style="display: flex; justify-content: center;">
         <div class="icon-dot">
-            <img src="../assets/battery.svg" width="70px">
+            <img src="./assets/battery.svg" width="70px">
         </div>
         <span class="title">SusPENse</span>
         <div class="icon-dot">
-            <img src="../assets/drone.svg" width="70px">
+            <img src="./assets/drone.svg" width="70px">
         </div>
     </div>
     <div style="display: flex; justify-content: center; gap: 50px;">
         <div class="icon-dot">
-            <img src="../assets/plane.svg" width="70px">
+            <img src="./assets/plane.svg" width="70px">
         </div>
         <span class="title">LTD</span>
         <div class="icon-dot">
-            <img src="../assets/propeller.svg" width="70px" style="position: relative; left: 6px;">
+            <img src="./assets/propeller.svg" width="70px" style="position: relative; left: 6px;">
         </div>
     </div><br />
     <div style="text-align: center;">
         <a href="https://github.com/FreeformWave544/Suspense">Fully Open-Source @ GitHub.com!</a>
     </div>
-    <div style="position: fixed; right: 7%; bottom: 44%;">
+    <div style="position: fixed; right: 7%; bottom: calc(400px + 1vh);">
         Drag to Move in 3D!
     </div>
     <div class="cloud-noise-bg"> <svg style="display: none;"> <filter id="cloudNoise"> <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="4" stitchTiles="stitch"/> </filter> </svg> </div>
@@ -60,7 +60,7 @@
 
     const textureLoader = new THREE.TextureLoader()
     const fontLoader = new FontLoader()
-    const logoTexture = textureLoader.load('/RUNIC_PFP.png')
+    const logoTexture = textureLoader.load('./imgs/pfp/FreeformWave.png')
     logoTexture.colorSpace = THREE.SRGBColorSpace
 
     const cursor = {
